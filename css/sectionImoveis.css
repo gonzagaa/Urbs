@@ -1,0 +1,140 @@
+
+#imoveis {
+    position: relative;
+    overflow: hidden;
+}
+
+#imoveis .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#imoveis .cards .card {
+    width: 100%;
+    background: #e0e0e0;
+
+    overflow: hidden;
+    border-radius: 2rem 2rem 2rem 2rem;
+
+    box-shadow:  20px 20px 60px #c6c6c6,
+             -20px -20px 60px #ffffff;
+}
+
+#imoveis .cards .card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    height: 100%;
+}
+
+#imoveis .cards .card .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 2rem;
+}
+
+#imoveis .cards .card .text h2 {
+    font-size: 1.8rem;
+}
+
+#imoveis .cards .card .text h3 {
+    font-size: 1.4rem;
+    margin-top: .5rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+#imoveis .cards .card .text .topics {
+    margin-block: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    background: #d1d1d1;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+
+}
+
+#imoveis .cards .card .text .topics p {
+    font-size: 1.6rem;
+}
+
+#imoveis .cards .card .text h4 {
+    margin-bottom: 2rem;
+
+    font-size: 3rem;
+}
+
+#imoveis .cards .card .text h4 span {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#imoveis .cards .card .text a {
+    width: 100%;
+}
+
+#imoveis .cards .card .text a button {
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(to right, #000, #0f0f0f);
+
+    transition: all 200ms ease-in-out;
+}
+
+#imoveis .cards .card .text a button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+    box-shadow:  20px 20px 60px #c6c6c686,
+             -20px -20px 60px #ffffff88;
+}
+
+#imoveis .swiper-button-next,
+#imoveis .swiper-button-prev {
+    display: none;
+}
+
+#imoveis .cards {
+    padding-bottom: 5rem;
+}
+
+#imoveis .swiper-pagination-bullet {
+    background-color: #ffffff4b; 
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+  }
+  
+#imoveis .swiper-pagination-bullet-active {
+    background: #000; 
+}
+
+
+@media (min-width: 1080px) {
+    section#imoveis .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section#imoveis .swiper-button-next,
+    section#imoveis .swiper-button-prev {
+        display: inherit;
+        color: #fff;
+        transform: scale(.6);
+    }
+}
+
